@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['103.224.159.71/32']
 
 
 # Application definition
@@ -85,6 +85,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'audiomix.wsgi.application'
 
 
@@ -101,6 +103,7 @@ DATABASES = {
         'PASSWORD':os.environ.get('PASSWORD'),
     }
 }
+
 
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -150,7 +153,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
